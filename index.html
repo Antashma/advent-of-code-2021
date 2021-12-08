@@ -6,18 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advent of Code -- Day 1</title>
     
-    <script type="module" src="scripts/checkIncreasedFromPrev.js">
-        console.log("this is res:", res)
+    <script type="module" src="scripts/checkIncreasedFromPrev.js"></script>
+    <script type="module">
+        import {res} from './scripts/checkIncreasedFromPrev.js'
+        document.getElementById('answer').innerHTML = res
     </script>
+
 
 </head>
 <body>
-    <h1>Day 1: Sonar Sweep</h1>
-    <a href="https://adventofcode.com/2021/day/1">Link to Source</a>
-    <a href="https://adventofcode.com/2021/day/1/input">Link to Puzzle Input</a>
-    <p>How many measurements are larger than the previous meaurement?</p>
-    <p>Answer: ___</p>
-    
+    <header>
+        <h1>Day 1: Sonar Sweep</h1>
+        <nav>
+            <a href="https://adventofcode.com/2021/day/1">Link to Source</a> /
+            <a href="https://adventofcode.com/2021/day/1/input">Link to Puzzle Input</a>
+        </nav>
+    </header>
+    <main>
+        <p>How many measurements are larger than the previous measurement?</p>
+        <code>
+            After converting input data to an array called data, I created this function to solve the problem.
+            <pre>
+            function checkIncreasedFromPrev(arr) {
+                let increasedFromPrev = 0;
+                arr.map(function(el, i) {
+                    if (i === 0) {
+                        increasedFromPrev += 0;
+                    } else if (el > arr[i - 1] ) {
+                        increasedFromPrev += 1;
+                    };
+                });
+                return increasedFromPrev;
+            };
+        
+        export const res = checkIncreasedFromPrev(data);
+            </pre>
+        </code>
+        <p>Answer: <span id="answer"></span></p>
+    </main>
     
 </body>
 </html>
