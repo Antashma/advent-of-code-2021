@@ -16,34 +16,53 @@
 </head>
 <body>
     <header>
-        <h1>Day 1: Sonar Sweep</h1>
-        <nav>
-            <a href="https://adventofcode.com/2021/day/1">Link to Source</a> /
-            <a href="https://adventofcode.com/2021/day/1/input">Link to Puzzle Input</a>
-        </nav>
+        <h1>Advent of Code 2021</h1>
+
     </header>
     <main>
-        <p>How many measurements are larger than the previous measurement?</p>
-        <code>
-            After converting input data to an array called data, I created this function to solve the problem.
-            <pre>
-            function checkIncreasedFromPrev(arr) {
-                let increasedFromPrev = 0;
-                arr.map(function(el, i) {
-                    if (i === 0) {
-                        increasedFromPrev += 0;
-                    } else if (el > arr[i - 1] ) {
-                        increasedFromPrev += 1;
-                    };
-                });
-                return increasedFromPrev;
-            };
-        
-        export const res = checkIncreasedFromPrev(data);
-            </pre>
-        </code>
-        <p>Answer: <span id="answer"></span></p>
+        <section>
+            <h2>--- Day 1: Sonar Sweep ---</h2>
+            <div class="day-nav">
+                <a href="https://adventofcode.com/2021/day/1">Link to Source</a> /
+                <a href="https://adventofcode.com/2021/day/1/input">Link to Puzzle Input</a>
+            </div>
+            <h3>Question</h3>
+            <p>How many measurements are larger than the previous measurement?</p>
+            <h3>Answer</h3>
+            <code>
+                After converting input data to an array called data, I created this function to solve the problem.
+                <pre>
+                function checkIncreasedFromPrev(arr) {
+                    let increasedFromPrev = 0;
+                    arr.map(function(el, i) {
+                        if (i === 0) {
+                            increasedFromPrev += 0;
+                        } else if (el > arr[i - 1] ) {
+                            increasedFromPrev += 1;
+                        };
+                    });
+                    return increasedFromPrev;
+                };
+            
+            export const res = checkIncreasedFromPrev(data);
+                </pre>
+            </code>
+            <p>The result is <strong><span id="answer"></span></strong></p>
+        </section>
+        <section>
+            <h2>--- Day 2: Dive! ---</h2>
+            <div class="day-nav">
+                <a href="https://adventofcode.com/2021/day/2">Link to Source</a> /
+                <a href="https://adventofcode.com/2021/day/2/input">Link to Puzzle Input</a>
+            </div>
+            <h3>Question</h3>
+            <p>Calculate the horizontal position and depth you would have after following the planned course. <strong>What do you get if you multiply your final horizontal position by your final depth?</strong></p>
+            <h3>Answer</h3>
+            <p> ((Working on it 👩‍💻...))</p>
+        </section>
     </main>
-    
+    <footer>
+        <a href="https://adventofcode.com">Advent of Code Site</a>
+    </footer>
 </body>
 </html>
