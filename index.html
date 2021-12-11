@@ -8,11 +8,10 @@
     
     <script type="module" src="scripts/checkIncreasedFromPrev.js"></script>
     <script type="module">
-        import {res} from './scripts/checkIncreasedFromPrev.js'
-        import {dayTwo} from './input-day2.html'
+        import {resDay1Part1, resDay1Part2} from './scripts/checkIncreasedFromPrev.js'
 
-        document.getElementById('answer').innerHTML = res
-        console.log(dayTwo)
+        document.getElementById('answer').innerHTML = resDay1Part1
+        document.getElementById('ans-d1p2').innerHTML = resDay1Part2
     </script>
 
 
@@ -28,10 +27,11 @@
             <div class="day-nav">
                 <a href="https://adventofcode.com/2021/day/1">Link to Source</a> /
                 <a href="https://adventofcode.com/2021/day/1/input">Link to Puzzle Input</a>
+            <h3>Part 1</h3>
             </div>
-            <h3>Question</h3>
+            <h4>Question</h4>
             <p>How many measurements are larger than the previous measurement?</p>
-            <h3>Answer</h3>
+            <h4>Answer</h4>
             <code>
                 After converting input data to an array called data, I created this function to solve the problem.
                 <pre>
@@ -51,7 +51,14 @@
                 </pre>
             </code>
             <p>The result is <strong><span id="answer"></span></strong></p>
+
+            <h3>Part 2</h3>
+            <h4>Question</h4>
+            <p>Your goal now is to count <strong>the number of times the sum of measurements in this sliding window increases from the previous sum</strong>. Consider sums of a three-measurement sliding window. <strong>How many sums are larger than the previous sum?</strong></p>
+            <h4>Answer</h4>
+            <p>The result is: <strong><span id="ans-d1p2"></span></strong></p>
         </section>
+
         <section>
             <h2>--- Day 2: Dive! ---</h2>
             <div class="day-nav">
