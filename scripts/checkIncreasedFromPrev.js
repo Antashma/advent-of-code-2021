@@ -16,7 +16,7 @@ function checkIncreasedFromPrev(arr) {
         let sumArr = []
         arr.map(
             function(el, i) {
-                if (arr[i+3]) {
+                if (arr[i+2]) {
                     sumArr.push(el + arr[i+1] + arr[i + 2])
                 }
             }
