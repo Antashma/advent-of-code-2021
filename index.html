@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advent of Code -- Day 1</title>
     
-    <script type="module" src="scripts/checkIncreasedFromPrev.js"></script>
+    <script type="module" src="./scripts/day1-helpers.js"></script>
     <script type="module">
-        import {resDay1Part1, resDay1Part2} from './scripts/checkIncreasedFromPrev.js'
+        import {resDay1Part1, resDay1Part2} from './scripts/day1-helpers.js'
 
         document.getElementById('answer').innerHTML = resDay1Part1
         document.getElementById('ans-d1p2').innerHTML = resDay1Part2
@@ -34,21 +34,21 @@
             <h4>Answer</h4>
             <code>
                 After converting input data to an array called data, I created this function to solve the problem.
-                <pre>
-                function checkIncreasedFromPrev(arr) {
-                    let increasedFromPrev = 0;
-                    arr.map(function(el, i) {
-                        if (i === 0) {
-                            increasedFromPrev += 0;
-                        } else if (el > arr[i - 1] ) {
-                            increasedFromPrev += 1;
-                        };
-                    });
-                    return increasedFromPrev;
-                };
-            
-            export const res = checkIncreasedFromPrev(data);
-                </pre>
+<pre>
+function checkIncreasedFromPrev(arr) {
+    let increasedFromPrev = 0;
+    arr.map(function(el, i) {
+        if (i === 0) {
+            increasedFromPrev += 0;
+        } else if (el > arr[i - 1] ) {
+            increasedFromPrev += 1;
+        };
+    });
+    return increasedFromPrev;
+};
+
+checkIncreasedFromPrev(data);
+</pre>
             </code>
             <p>The result is <strong><span id="answer"></span></strong></p>
 
@@ -56,6 +56,23 @@
             <h4>Question</h4>
             <p>Your goal now is to count <strong>the number of times the sum of measurements in this sliding window increases from the previous sum</strong>. Consider sums of a three-measurement sliding window. <strong>How many sums are larger than the previous sum?</strong></p>
             <h4>Answer</h4>
+            <code>
+                <pre>
+function getThreeMeasurementSums(arr) {
+    let sumArr = []
+    arr.map(
+        function(el, i) {
+            if (arr[i+2]) {
+                sumArr.push(el + arr[i+1] + arr[i + 2])
+            }
+        }
+    )
+    return sumArr
+}
+                </pre>
+            checkIncreasedFromPrev(getThreeMeasurementSums(day1input))
+            </code>
+            <p>Created the above function to return an array of the three-measurement sums and then reused the previous function to get the number of times the sums increased from the previous sum.</p>
             <p>The result is: <strong><span id="ans-d1p2"></span></strong></p>
         </section>
 

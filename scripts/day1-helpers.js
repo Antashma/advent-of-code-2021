@@ -1,4 +1,4 @@
-import {data} from './data.js';
+import {data} from './data-d1.js';
 
 function checkIncreasedFromPrev(arr) {
         let increasedFromPrev = 0;
