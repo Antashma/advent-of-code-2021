@@ -14,24 +14,18 @@
             arr.map(function(el, i) {
                 switch (el) {
                 case "forward":
-                    console.log(el, arr[i + 1])
                     horizontal += Number(arr[i + 1])
                     break;
                 case "up":
-                console.log(el, arr[i + 1])
-
                     depth -= Number(arr[i + 1])
                     break;
                 case "down":
-                console.log(el, arr[i + 1])
-
                     depth += Number(arr[i + 1])
                     break;
                 default:
                     break;
                 }
             })
-            console.log("h:", horizontal, "d:", depth)
             return horizontal * depth
         }
         const res = getProductOfFinalPostions(dayTwoArr);
