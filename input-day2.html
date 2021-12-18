@@ -35,18 +35,19 @@
             let horizontal = 0;
             let depth = 0;
             arr.map(function(el, i) {
+                let num = Number(arr[i + 1])
                 switch (el) {
                 case "down":
-                    aim += arr[i + 1]
-                    depth += arr[i + 1]
+                    aim += num
+                    depth += num
                     break;
                 case "up":
-                    aim -= arr[i + 1]
-                    depth -= arr[i + 1]
+                    aim -= num
+                    depth -= num
                     break;
                 case "forward":
-                    horizontal += arr[i + 1]
-                    depth += aim * arr[i + 1]
+                    horizontal += num
+                    depth += aim * num
                     break;
                 default:
                     break;
