@@ -29,7 +29,34 @@
             return horizontal * depth
         }
         const res = getProductOfFinalPostions(dayTwoArr);
-        console.log(res)
+        //PART 2
+        function getProductOfFinalPositions2(arr) {
+            let aim = 0;
+            let horizontal = 0;
+            let depth = 0;
+            arr.map(function(el, i) {
+                switch (el) {
+                case "down":
+                    aim += arr[i + 1]
+                    depth += arr[i + 1]
+                    break;
+                case "up":
+                    aim -= arr[i + 1]
+                    depth -= arr[i + 1]
+                    break;
+                case "forward":
+                    horizontal += arr[i + 1]
+                    depth += aim * arr[i + 1]
+                    break;
+                default:
+                    break;
+                }
+            })
+            
+            return horizontal * depth
+        }
+        const res2 = getProductOfFinalPositions2(dayTwoArr)
+        console.log(res2)
     </script>
 </head>
 <body>
