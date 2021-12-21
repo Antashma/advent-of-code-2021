@@ -9,8 +9,12 @@
 
 <script type="module">
     import getArray from "./scripts/puzzle-input-to-array.js"
+    import {getMostCommon} from "./scripts/day3-helpers.js"
     const day3Arr = getArray()
-    console.log("day 3 array", day3Arr)
+    const res = getMostCommon(day3Arr)
+    console.log(res)
+    //PART 1
+    
 </script>
 <body>
    <div id="input">
