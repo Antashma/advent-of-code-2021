@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>day two puzzle input</title>
     <script type="module">
+        import getArray from "./scripts/puzzle-input-to-array.js"
         import {getProductOfFinalPositions, getProductOfFinalPositions2} from "./scripts/day2-helpers.js"
+
         //MAKE PUZZLE INPUT INTO ARRAY
-        const dayTwo = document.getElementById("input").innerText
-        export const dayTwoArr = dayTwo.split(" ")
+        const dayTwoArr = getArray()
         //PART 1
         const res = getProductOfFinalPositions(dayTwoArr);
         console.log("day 2 part 1 answer:", res)
