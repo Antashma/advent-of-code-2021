@@ -14,7 +14,7 @@ export function getMostCommon(inputArr) {
         []  //12th
     ]
 
-    inputArr.forEach(function(binCluster, binClusterIndex){
+    inputArr.forEach(function(binCluster){
         for ( let i = 0; i < binCluster.length; i++) {
             posArr[i].push(binCluster[i])
         }
@@ -22,7 +22,7 @@ export function getMostCommon(inputArr) {
     let gammaBinArr = []
     let epsilonBinArr = []
 
-    posArr.forEach(function(pos, posIdx) {
+    posArr.forEach(function(pos) {
         //console.log(pos.filter(bin => bin == 0).length/100)
         if (pos.filter(bin => bin == 0).length/1000 > .5 ) {
             gammaBinArr.push(0)
