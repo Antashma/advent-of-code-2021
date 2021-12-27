@@ -5,6 +5,9 @@ body {
 header {
     padding-bottom: 10px;
     border-bottom: 1px dotted #666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 footer {
