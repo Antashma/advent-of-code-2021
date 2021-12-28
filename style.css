@@ -38,3 +38,8 @@ a:hover {
 h4 {
     color:grey;
 }
+
+p span.question {
+    color: dodgerblue;
+    font-weight: bold;
+}
